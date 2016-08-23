@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleProgressBar">
+        <attr name="scale" format="integer" />
+        <attr name="gap" format="dimension" />
+        <attr name="background_color" format="color" />
+        <attr name="foreground_color" format="color" />
+        <attr name="progress" format="float" />
+    </declare-styleable>
+</resources>
