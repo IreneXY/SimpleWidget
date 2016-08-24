@@ -67,6 +67,7 @@ SimpleProgressBar progressBarWithGap = (SimpleProgressBar) findViewById(R.id.sim
 progressBarWithGap.setProgress(0.4f);
 ```
 They will be looked like
+
 <img src="https://github.com/IreneXY/SimpleWidget/raw/master/screenshot/simple_progress_bar.png" width="300">
 
 
