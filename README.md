@@ -1,3 +1,6 @@
+
+[![Maven Central](https://img.shields.io/badge/maven%20central-1.0.0-brightgreen.svg)](http://search.maven.org/#artifactdetails%7Ccom.mintminter%7Csimplewidget%7C1.0.0%7Caar) [![jcenter](https://img.shields.io/badge/jcenter-1.0.0-brightgreen.svg)](https://bintray.com/irenexy/SimpleWidget/simplewidget)
+
 #SimpleWidget
 SimpleWidget library for Android.
 
