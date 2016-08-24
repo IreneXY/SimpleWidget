@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.widget.LinearLayout;
 
 public class SimpleProgressBar extends LinearLayout {
+    private Context mContext;
     private LinearLayout mView;
     private int nScale = 10;
     private int nGapInDP = 5;
@@ -20,13 +21,14 @@ public class SimpleProgressBar extends LinearLayout {
     }
 
     private void init(Context context, AttributeSet attrs) {
+        mContext = context;
         TypedArray styledAttrs = context.obtainStyledAttributes(attrs,
                 R.styleable.SimpleProgressBar);
-        nScale = styledAttrs.getInt(R.styleable.SimpleProgressBar_scale, nScale);
-        nGapInDP = (int) styledAttrs.getDimension(R.styleable.SimpleProgressBar_gap, nGapInDP);
-        fProgress = styledAttrs.getFloat(R.styleable.SimpleProgressBar_progress, fProgress);
-        nForegroundColor = styledAttrs.getColor(R.styleable.SimpleProgressBar_foreground_color, nForegroundColor);
-        nBackgroundColor = styledAttrs.getColor(R.styleable.SimpleProgressBar_background_color, nBackgroundColor);
+        nScale = styledAttrs.getInt(R.styleable.SimpleProgressBar_spb_scale, nScale);
+        nGapInDP = (int) styledAttrs.getDimension(R.styleable.SimpleProgressBar_spb_gap, nGapInDP);
+        fProgress = styledAttrs.getFloat(R.styleable.SimpleProgressBar_spb_progress, fProgress);
+        nForegroundColor = styledAttrs.getColor(R.styleable.SimpleProgressBar_spb_foreground_color, nForegroundColor);
+        nBackgroundColor = styledAttrs.getColor(R.styleable.SimpleProgressBar_spb_background_color, nBackgroundColor);
         styledAttrs.recycle();
 
         mView = new LinearLayout(context);
@@ -34,18 +36,21 @@ public class SimpleProgressBar extends LinearLayout {
         mView.setOrientation(LinearLayout.HORIZONTAL);
         mView.setWeightSum(nScale);
         mView.setGravity(Gravity.CENTER);
-        generate(context);
+        addView(mView);
+
+        generate();
     }
 
-    private void generate(Context context){
+    private void generate(){
+
         if(mView.getChildCount() > 0){
             mView.removeAllViews();
         }
 
         for(int i = 0; i< nScale; i++){
-            LinearLayout block = new LinearLayout(context);
+            LinearLayout block = new LinearLayout(mContext);
             LinearLayout.LayoutParams blocklp = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT);
-            blocklp.setMargins(0,0,dpToPixal(context, nGapInDP),0);
+            blocklp.setMargins(0,0,dpToPixal(nGapInDP),0);
             blocklp.weight = 1;
             block.setLayoutParams(blocklp);
             block.setGravity(Gravity.CENTER);
@@ -64,8 +69,12 @@ public class SimpleProgressBar extends LinearLayout {
 
             mView.addView(block);
         }
+    }
 
-        addView(mView);
+    public void setScale(int scale){
+        nScale = scale;
+        mView.setWeightSum(nScale);
+        generate();
     }
 
     public void setProgress(float processingValue, float maxValue){
@@ -95,8 +104,8 @@ public class SimpleProgressBar extends LinearLayout {
         }
     }
 
-    public static int dpToPixal(Context context,int dp){
-        float scale = context.getResources().getDisplayMetrics().density;
+    private int dpToPixal(int dp){
+        float scale = mContext.getResources().getDisplayMetrics().density;
         return (int) (dp*scale + 0.5f);//conversiton from dp to pixels
     }
 }

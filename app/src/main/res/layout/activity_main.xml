@@ -26,11 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginTop="5dp"
-        app:scale="20"
-        app:progress="0.7"
-        app:gap="0dp"
-        app:foreground_color="@color/colorAccent"
-        app:background_color="@color/colorPrimary"/>
+        app:spb_scale="20"
+        app:spb_progress="0.7"
+        app:spb_gap="0dp"
+        app:spb_foreground_color="@color/colorAccent"
+        app:spb_background_color="@color/colorPrimary"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,9 +42,9 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginTop="5dp"
-        app:scale="20"
-        app:progress="0.7"
-        app:gap="2dp"
-        app:foreground_color="@color/colorAccent"
-        app:background_color="@color/colorPrimary"/>
+        app:spb_scale="20"
+        app:spb_progress="0.7"
+        app:spb_gap="2dp"
+        app:spb_foreground_color="@color/colorAccent"
+        app:spb_background_color="@color/colorPrimary"/>
 </LinearLayout>
