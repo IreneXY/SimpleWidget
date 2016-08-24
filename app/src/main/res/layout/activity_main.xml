@@ -14,11 +14,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Simple Widget:" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="SimpleProgressBar - no gap:" />
 
     <com.mintminter.simplewidget.SimpleProgressBar
-        android:id="@+id/simpleprobressbar"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginTop="5dp"
@@ -35,7 +39,6 @@
         android:text="SimpleProgressBar - 2dp width gap:" />
 
     <com.mintminter.simplewidget.SimpleProgressBar
-        android:id="@+id/simpleprobressbar_with_gap"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginTop="5dp"
