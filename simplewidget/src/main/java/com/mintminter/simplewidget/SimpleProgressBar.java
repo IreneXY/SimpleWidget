@@ -10,7 +10,7 @@ public class SimpleProgressBar extends LinearLayout {
     private Context mContext;
     private LinearLayout mView;
     private int nScale = 10;
-    private int nGapInDP = 5;
+    private int nGap = 5;
     private float fProgress = 0;
     private int nForegroundColor = Color.BLUE;
     private int nBackgroundColor = Color.GRAY;
@@ -25,7 +25,7 @@ public class SimpleProgressBar extends LinearLayout {
         TypedArray styledAttrs = context.obtainStyledAttributes(attrs,
                 R.styleable.SimpleProgressBar);
         nScale = styledAttrs.getInt(R.styleable.SimpleProgressBar_spb_scale, nScale);
-        nGapInDP = (int) styledAttrs.getDimension(R.styleable.SimpleProgressBar_spb_gap, nGapInDP);
+        nGap = (int) styledAttrs.getDimension(R.styleable.SimpleProgressBar_spb_gap, nGap);
         fProgress = styledAttrs.getFloat(R.styleable.SimpleProgressBar_spb_progress, fProgress);
         nForegroundColor = styledAttrs.getColor(R.styleable.SimpleProgressBar_spb_foreground_color, nForegroundColor);
         nBackgroundColor = styledAttrs.getColor(R.styleable.SimpleProgressBar_spb_background_color, nBackgroundColor);
@@ -50,7 +50,7 @@ public class SimpleProgressBar extends LinearLayout {
         for(int i = 0; i< nScale; i++){
             LinearLayout block = new LinearLayout(mContext);
             LinearLayout.LayoutParams blocklp = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT);
-            blocklp.setMargins(0,0,dpToPixal(nGapInDP),0);
+            blocklp.setMargins(0,0, nGap,0);
             blocklp.weight = 1;
             block.setLayoutParams(blocklp);
             block.setGravity(Gravity.CENTER);
@@ -102,10 +102,5 @@ public class SimpleProgressBar extends LinearLayout {
             child.setBackgroundColor(nForegroundColor);
             child.setAlpha(0.5f);
         }
-    }
-
-    private int dpToPixal(int dp){
-        float scale = mContext.getResources().getDisplayMetrics().density;
-        return (int) (dp*scale + 0.5f);//conversiton from dp to pixels
     }
 }

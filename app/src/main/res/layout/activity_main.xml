@@ -41,7 +41,7 @@
         android:layout_marginTop="5dp"
         app:spb_scale="20"
         app:spb_progress="0.7"
-        app:spb_gap="2dp"
+        app:spb_gap="5dp"
         app:spb_foreground_color="@color/colorAccent"
         app:spb_background_color="@color/colorPrimary"/>
 </LinearLayout>
