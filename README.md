@@ -16,14 +16,14 @@ Easy to customize the widget color
 <dependency>
   <groupId>com.mintminter</groupId>
   <artifactId>simplewidget</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
 
 * Gradle
 ```
-compile 'com.mintminter:simplewidget:1.0.0'
+compile 'com.mintminter:simplewidget:1.0.1'
 ```
 
 ## SimpleProgressBar:
@@ -54,7 +54,7 @@ Using the SimpleProgressBar in your layout (with or without gap)
     android:layout_marginTop="5dp"
     app:spb_scale="20"
     app:spb_progress="0.7"
-    app:spb_gap="2dp"
+    app:spb_gap="5dp"
     app:spb_foreground_color="@color/colorAccent"
     app:spb_background_color="@color/colorPrimary"/>
 ```
@@ -69,6 +69,9 @@ progressBarWithGap.setProgress(0.4f);
 They will be looked like
 
 <img src="https://github.com/IreneXY/SimpleWidget/raw/master/screenshot/simple_progress_bar.png" width="300">
+
+## Demo
+https://raw.githubusercontent.com/IreneXY/SimpleWidget/master/apk/demo-1.0.1.apk
 
 ## Licence
 
