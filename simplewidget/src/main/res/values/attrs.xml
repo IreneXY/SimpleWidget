@@ -7,4 +7,13 @@
         <attr name="spb_foreground_color" format="color" />
         <attr name="spb_progress" format="float" />
     </declare-styleable>
+
+    <declare-styleable name="SimpleSeekBar">
+        <attr name="ssb_background_height" format="dimension"/>
+        <attr name="ssb_foreground_height" format="dimension"/>
+        <attr name="ssb_background_color" format="color"/>
+        <attr name="ssb_foreground_color" format="color"/>
+        <attr name="ssb_thumb_color" format="color"/>
+        <attr name="ssb_progress" format="float"/>
+    </declare-styleable>
 </resources>
