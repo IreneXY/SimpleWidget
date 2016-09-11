@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 
@@ -43,18 +44,19 @@ public class SimpleProgressBar extends LinearLayout {
         nCorner = (int) styledAttrs.getDimension(R.styleable.SimpleProgressBar_spb_corner, nCorner);
         styledAttrs.recycle();
 
+        Log.i("Irene", "corner = " + nCorner);
         mView = new LinearLayout(context);
         mView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
         mView.setOrientation(LinearLayout.HORIZONTAL);
         mView.setWeightSum(SCALE);
         mView.setGravity(Gravity.LEFT|Gravity.CENTER_VERTICAL);
-        mView.setBackgroundColor(nBackgroundColor);
+        mView.setBackgroundDrawable(SimpleUtil.setRectangleDrawable(getContext(), nBackgroundColor, nCorner));
 
         mProgressView = new LinearLayout(context);
         mProgressLP = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT);
         mProgressView.setLayoutParams(mProgressLP);
         mProgressView.setOrientation(LinearLayout.HORIZONTAL);
-        mProgressView.setBackgroundColor(nForegroundColor);
+        mProgressView.setBackgroundDrawable(SimpleUtil.setRectangleDrawable(getContext(), nForegroundColor, nCorner));
         mView.addView(mProgressView);
         addView(mView);
 
