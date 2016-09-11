@@ -55,7 +55,7 @@ float progress = progressBar.getProgress();
 ```
 They will be looked like
 
-<img src="https://github.com/IreneXY/SimpleWidget/raw/master/screenshot/SimpleProgressBar-1.1.1">
+<img src="https://github.com/IreneXY/SimpleWidget/raw/master/screenshot/SimpleProgressBar-1.1.1.gif">
 
 ## Demo
 https://raw.githubusercontent.com/IreneXY/SimpleWidget/master/apk/demo-1.1.1.apk
