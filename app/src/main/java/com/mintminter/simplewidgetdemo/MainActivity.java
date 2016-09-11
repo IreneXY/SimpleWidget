@@ -2,28 +2,55 @@ package com.mintminter.simplewidgetdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.mintminter.simplewidget.SimpleProgressBar;
 
 public class MainActivity extends AppCompatActivity {
+
+    SimpleProgressBar simpleProgressbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SimpleProgressBar progressBar = (SimpleProgressBar) findViewById(R.id.simpleprobressbar);
-        progressBar.setProgress(0.65f);
-        String sProgress = String.format("Progress: %1$.0f%%", progressBar.getProgress()*100);
-        ((TextView) findViewById(R.id.without_gap_text)).setText(sProgress);
+        simpleProgressbar = (SimpleProgressBar) findViewById(R.id.simpleprogressbar);
+        simpleProgressbar.setProgress(0.1f);
 
-        SimpleProgressBar progressBarWithGap = (SimpleProgressBar) findViewById(R.id.simpleprobressbar_with_gap);
-        progressBarWithGap.setProgress(0.6f);
-        sProgress = String.format("Progress: %1$.0f%%", progressBarWithGap.getProgress()*100);
-        ((TextView) findViewById(R.id.within_gap_text)).setText(sProgress);
+        go();
+    }
 
+    private void go(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
 
+                while(true){
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    MainActivity.this.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            float f = simpleProgressbar.getProgress();
+                            if(f > 1){
+                                f = 0;
+                            }
+                            f += 0.05f;
+                            simpleProgressbar.setProgress(f);
+
+                        }
+                    });
+                }
+            }
+        }).start();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
     }
 }

@@ -12,48 +12,20 @@
     tools:context="com.mintminter.simplewidgetdemo.MainActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="SimpleProgressBar - no gap:" />
+        android:layout_marginBottom="10dp"
+        android:text="SimpleProgressBar:" />
 
     <com.mintminter.simplewidget.SimpleProgressBar
-        android:id="@+id/simpleprobressbar"
+        android:id="@+id/simpleprogressbar"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginTop="5dp"
-        app:spb_progress="0.1"
-        app:spb_foreground_color="@color/colorAccent"
-        app:spb_background_color="@color/colorPrimary"/>
+        android:layout_height="10dp"
+        app:spb_foreground_color="@color/amber500"
+        app:spb_background_color="@color/blue500"
+        app:spb_progress="0.3"
+        app:spb_corner="3dp"/>
 
-    <TextView
-        android:id="@+id/without_gap_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Progress: 10%" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="SimpleProgressBar - 2dp width gap:" />
-
-    <com.mintminter.simplewidget.SimpleProgressBar
-        android:id="@+id/simpleprobressbar_with_gap"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginTop="5dp"
-        app:spb_scale="20"
-        app:spb_progress="0.1"
-        app:spb_gap="5dp"
-        app:spb_foreground_color="@color/colorAccent"
-        app:spb_background_color="@color/colorPrimary"/>
-
-    <TextView
-        android:id="@+id/within_gap_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Progress: 10%" />
 </LinearLayout>
