@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="SimpleProgressBar">
-        <attr name="spb_scale" format="integer" />
-        <attr name="spb_gap" format="dimension" />
         <attr name="spb_background_color" format="color" />
         <attr name="spb_foreground_color" format="color" />
         <attr name="spb_progress" format="float" />
+        <attr name="spb_corner" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="SimpleSeekBar">
@@ -16,4 +16,5 @@
         <attr name="ssb_thumb_color" format="color"/>
         <attr name="ssb_progress" format="float"/>
     </declare-styleable>
+
 </resources>
