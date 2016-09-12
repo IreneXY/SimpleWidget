@@ -1,7 +1,7 @@
-
-[![Maven Central](https://img.shields.io/badge/maven%20central-1.1.1-brightgreen.svg)](http://search.maven.org/#artifactdetails%7Ccom.mintminter%7Csimplewidget%7C1.0.0%7Caar) [![jcenter](https://img.shields.io/badge/jcenter-1.1.1-brightgreen.svg)](https://bintray.com/irenexy/SimpleWidget/simplewidget)
-
 #SimpleWidget
+
+[![Maven Central](https://img.shields.io/badge/maven%20central-1.1.1-brightgreen.svg)](http://search.maven.org/#artifactdetails%7Ccom.mintminter%7Csimplewidget%7C1.0.0%7Caar) [![jcenter](https://img.shields.io/badge/jcenter-1.1.1-brightgreen.svg)](https://bintray.com/irenexy/SimpleWidget/simplewidget) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](https://github.com/IreneXY/SimpleWidget/blob/master/LICENSE)
+
 SimpleWidget library for Android.
 
 ## Key Feature
