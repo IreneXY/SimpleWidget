@@ -20,8 +20,6 @@ public class SimpleProgressBar extends LinearLayout {
     private static final String TAG = "SimpleProgressBar";
     private static final int SCALE = 100;
 
-    private Context mContext;
-    private LinearLayout mView;
     private LinearLayout mProgressView;
     private LinearLayout.LayoutParams mProgressLP;
     private float fProgress = 0;
@@ -35,7 +33,6 @@ public class SimpleProgressBar extends LinearLayout {
     }
 
     private void init(Context context, AttributeSet attrs){
-        mContext = context;
         TypedArray styledAttrs = context.obtainStyledAttributes(attrs,
                 R.styleable.SimpleProgressBar);
         fProgress = styledAttrs.getFloat(R.styleable.SimpleProgressBar_spb_progress, fProgress);
@@ -44,22 +41,21 @@ public class SimpleProgressBar extends LinearLayout {
         nCorner = (int) styledAttrs.getDimension(R.styleable.SimpleProgressBar_spb_corner, nCorner);
         styledAttrs.recycle();
 
-        Log.i("Irene", "corner = " + nCorner);
-        mView = new LinearLayout(context);
+        LinearLayout mView = new LinearLayout(context);
         mView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
         mView.setOrientation(LinearLayout.HORIZONTAL);
         mView.setWeightSum(SCALE);
         mView.setGravity(Gravity.LEFT|Gravity.CENTER_VERTICAL);
-        mView.setBackgroundDrawable(SimpleUtil.setRectangleDrawable(getContext(), nBackgroundColor, nCorner));
+        mView.setBackgroundDrawable(SimpleUtil.newRectangleDrawable(getContext(), nBackgroundColor, nCorner));
 
         mProgressView = new LinearLayout(context);
         mProgressLP = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT);
         mProgressView.setLayoutParams(mProgressLP);
         mProgressView.setOrientation(LinearLayout.HORIZONTAL);
-        mProgressView.setBackgroundDrawable(SimpleUtil.setRectangleDrawable(getContext(), nForegroundColor, nCorner));
+        mProgressView.setBackgroundDrawable(SimpleUtil.newRectangleDrawable(getContext(), nForegroundColor, nCorner));
         mView.addView(mProgressView);
-        addView(mView);
 
+        addView(mView);
         setProgress(fProgress);
     }
 
