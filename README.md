@@ -1,5 +1,5 @@
 
-[![Maven Central](https://img.shields.io/badge/maven%20central-1.1.1-brightgreen.svg)](http://search.maven.org/#artifactdetails%7Ccom.mintminter%7Csimplewidget%7C1.0.0%7Caar) [![jcenter](https://img.shields.io/badge/jcenter-1.1.1-brightgreen.svg)](https://bintray.com/irenexy/SimpleWidget/simplewidget)
+[![Maven Central](https://img.shields.io/badge/maven%20central-1.1.2-brightgreen.svg)](http://search.maven.org/#artifactdetails%7Ccom.mintminter%7Csimplewidget%7C1.0.0%7Caar) [![jcenter](https://img.shields.io/badge/jcenter-1.1.2-brightgreen.svg)](https://bintray.com/irenexy/SimpleWidget/simplewidget)
 
 #SimpleWidget
 SimpleWidget library for Android.
@@ -16,14 +16,14 @@ Easy to customize the widget color
 <dependency>
   <groupId>com.mintminter</groupId>
   <artifactId>simplewidget</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2</version>
   <type>pom</type>
 </dependency>
 ```
 
 * Gradle
 ```
-compile 'com.mintminter:simplewidget:1.1.1'
+compile 'com.mintminter:simplewidget:1.1.2'
 ```
 
 ## SimpleProgressBar:
@@ -50,6 +50,7 @@ Set progress and get progress in your Activity
 ```
 SimpleProgressBar progressBar = (SimpleProgressBar) findViewById(R.id.simpleprobressbar);
 progressBar.setProgress(0.6f);
+
 float progress = progressBar.getProgress();
 
 ```
@@ -58,7 +59,7 @@ They will be looked like
 <img src="https://github.com/IreneXY/SimpleWidget/raw/master/screenshot/SimpleProgressBar-1.1.1.gif">
 
 ## Demo
-https://raw.githubusercontent.com/IreneXY/SimpleWidget/master/apk/demo-1.1.1.apk
+https://raw.githubusercontent.com/IreneXY/SimpleWidget/master/apk/demo-1.1.2.apk
 
 ## Licence
 
