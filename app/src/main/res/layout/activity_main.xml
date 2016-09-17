@@ -22,7 +22,7 @@
     <com.mintminter.simplewidget.SimpleProgressBar
         android:id="@+id/simpleprogressbar"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="15dp"
         app:spb_foreground_color="@color/amber500"
         app:spb_background_color="@color/blue500"
         app:spb_progress="0.3"
@@ -32,30 +32,30 @@
         android:layout_marginTop="20dp"
         android:id="@+id/simpleprogressbar1"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="15dp"
         app:spb_foreground_color="@color/purple500"
         app:spb_background_color="@color/purple100"
         app:spb_progress="0.3"
-        app:spb_corner="2dp"/>
+        app:spb_corner="7dp"/>
 
     <com.mintminter.simplewidget.SimpleProgressBar
         android:layout_marginTop="20dp"
         android:id="@+id/simpleprogressbar2"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="15dp"
         app:spb_foreground_color="@color/green500"
         app:spb_background_color="@color/lightblue100"
         app:spb_progress="0.5"
-        app:spb_corner="2dp"/>
+        app:spb_corner="4dp"/>
 
     <com.mintminter.simplewidget.SimpleProgressBar
         android:layout_marginTop="20dp"
         android:id="@+id/simpleprogressbar3"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="15dp"
         app:spb_foreground_color="@color/red500"
         app:spb_background_color="@color/red100"
         app:spb_progress="0.7"
-        app:spb_corner="2dp"/>
+        app:spb_corner="0dp"/>
 
 </LinearLayout>
