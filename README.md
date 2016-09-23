@@ -27,7 +27,7 @@ compile 'com.mintminter:simplewidget:1.1.2'
 ```
 
 ## SimpleProgressBar:
-Colorful horizontal progress bar which you can customize the foreground color and background color and the corner size.
+Colorful horizontal progress bar which you can customize the foreground color, the background color and the corner size.
 
 ### Usage
 Define 'app' namespace on root view in your layout
