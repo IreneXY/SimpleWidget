@@ -30,7 +30,7 @@ compile 'com.mintminter:simplewidget:1.1.2'
 Colorful horizontal progress bar which you can customize the foreground color, the background color and the corner size.
 
 ### Usage
-Define 'app' namespace on root view in your layout
+Define 'app' namespace on the root view in your layout
 ```
 xmlns:app="http://schemas.android.com/apk/res-auto"
 ```
