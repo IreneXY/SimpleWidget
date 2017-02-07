@@ -32,11 +32,14 @@
         android:layout_marginTop="20dp"
         android:id="@+id/simpleprogressbar1"
         android:layout_width="match_parent"
-        android:layout_height="15dp"
+        android:layout_height="32dp"
         app:spb_foreground_color="@color/purple500"
         app:spb_background_color="@color/purple100"
         app:spb_progress="0.3"
-        app:spb_corner="7dp"/>
+        app:spb_corner="7dp"
+        app:spb_shadow_border_width="8dp"
+        app:spb_shadow_corner="16dp"
+        app:spb_shadow_color="@color/grey300"/>
 
     <com.mintminter.simplewidget.SimpleProgressBar
         android:layout_marginTop="20dp"
