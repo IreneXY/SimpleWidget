@@ -6,15 +6,21 @@
         <attr name="spb_foreground_color" format="color" />
         <attr name="spb_progress" format="float" />
         <attr name="spb_corner" format="dimension" />
+        <attr name="spb_shadow_color" format="color"/>
+        <attr name="spb_shadow_border_width" format="dimension"/>
+        <attr name="spb_shadow_corner" format="dimension"/>
     </declare-styleable>
 
-    <declare-styleable name="SimpleSeekBar">
-        <attr name="ssb_background_height" format="dimension"/>
-        <attr name="ssb_foreground_height" format="dimension"/>
-        <attr name="ssb_background_color" format="color"/>
-        <attr name="ssb_foreground_color" format="color"/>
-        <attr name="ssb_thumb_color" format="color"/>
-        <attr name="ssb_progress" format="float"/>
+    <declare-styleable name="SimpleIconButton">
+        <attr name="sib_background_color" format="color" />
+        <attr name="sib_text" format="reference"/>
+        <attr name="sib_text_color" format="reference" />
+        <attr name="sib_text_size" format="dimension" />
+        <attr name="sib_corner" format="dimension" />
+        <attr name="sib_icon" format="reference"/>
+        <attr name="sib_icon_size" format="dimension"/>
+        <attr name="sib_icon_color" format="reference" />
+
     </declare-styleable>
 
 </resources>
