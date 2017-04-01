@@ -121,7 +121,7 @@ https://raw.githubusercontent.com/IreneXY/SimpleWidget/master/apk/demo-1.2.1.apk
 
 ## Licence
 
-Copyright 2016 Irene Yu
+Copyright 2016-2017 Irene Yu
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
