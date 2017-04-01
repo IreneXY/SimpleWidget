@@ -123,7 +123,13 @@
                     app:sb_text_appearance="@style/simplebuttonText1"/>
 
             </LinearLayout>
-
+            <com.mintminter.simplewidget.SimpleButton
+                android:id="@+id/simplebutton"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button_green"
+                app:sb_text_appearance="@style/simplebuttonText1"/>
 
 
 
