@@ -3,6 +3,7 @@ package com.mintminter.simplewidgetdemo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.mintminter.simplewidget.SimpleButton;
 import com.mintminter.simplewidget.SimpleProgressBar;
 
 /*******************************************************************************
@@ -16,6 +17,7 @@ import com.mintminter.simplewidget.SimpleProgressBar;
 public class MainActivity extends AppCompatActivity {
 
     SimpleProgressBar simpleProgressbar;
+    SimpleButton simpleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         simpleProgressbar.setProgress(0.1f);
 
         go();
+
+        simpleButton = (SimpleButton) findViewById(R.id.simplebutton);
+        simpleButton.setText("Set Text Programmably");
     }
 
     private void go(){
