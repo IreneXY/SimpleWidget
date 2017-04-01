@@ -1,14 +1,15 @@
-#SimpleWidget
+# SimpleWidget
 
-[![Maven Central](https://img.shields.io/badge/maven%20central-1.1.3-brightgreen.svg)](http://search.maven.org/#artifactdetails%7Ccom.mintminter%7Csimplewidget%7C1.0.0%7Caar) [![jcenter](https://img.shields.io/badge/jcenter-1.1.3-brightgreen.svg)](https://bintray.com/irenexy/SimpleWidget/simplewidget) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](https://github.com/IreneXY/SimpleWidget/blob/master/LICENSE)
+[![Maven Central](https://img.shields.io/badge/maven%20central-1.2.1-brightgreen.svg)](http://search.maven.org/#artifactdetails%7Ccom.mintminter%7Csimplewidget%7C1.0.0%7Caar) [![jcenter](https://img.shields.io/badge/jcenter-1.2.1-brightgreen.svg)](https://bintray.com/irenexy/SimpleWidget/simplewidget) [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](https://github.com/IreneXY/SimpleWidget/blob/master/LICENSE)
 
 SimpleWidget library for Android.
 
 ## Key Feature
-Easy to customize the widget color
+Easy to customize the widget style
 
 ## What's in SimpleWidget
 * SimpleProgressBar
+* SimpleButton
 
 ## Installation
 * Maven
@@ -16,17 +17,17 @@ Easy to customize the widget color
 <dependency>
   <groupId>com.mintminter</groupId>
   <artifactId>simplewidget</artifactId>
-  <version>1.1.3</version>
+  <version>1.2.1</version>
   <type>pom</type>
 </dependency>
 ```
 
 * Gradle
 ```
-compile 'com.mintminter:simplewidget:1.1.3'
+compile 'com.mintminter:simplewidget:1.2.1'
 ```
 
-## SimpleProgressBar:
+## 1. SimpleProgressBar:
 Colorful horizontal progress bar which you can customize the foreground color, the background color, the shadow color and the corner size.
 
 ### Usage
@@ -34,7 +35,7 @@ Define 'app' namespace on the root view in your layout
 ```
 xmlns:app="http://schemas.android.com/apk/res-auto"
 ```
-Using the SimpleProgressBar in your layout (with or without gap)
+Using the SimpleProgressBar in your layout 
 ```
 <com.mintminter.simplewidget.SimpleProgressBar
         android:layout_marginTop="20dp"
@@ -62,8 +63,61 @@ They will be looked like
 
 <img src="https://github.com/IreneXY/SimpleWidget/raw/master/screenshot/SimpleProgressBar-1.1.3.gif">
 
+## 2. SimpleButton:
+A button widget which is easy to set button style and icon.
+
+### Usage
+Define 'app' namespace on the root view in your layout
+```
+xmlns:app="http://schemas.android.com/apk/res-auto"
+```
+Using the SimpleButton in your layout 
+```
+<!-- only icon on the button -->
+<com.mintminter.simplewidget.SimpleButton
+  android:layout_width="0dp"
+  android:layout_weight="1"
+  android:layout_height="50dp"
+  android:layout_marginRight="10dp"
+  android:background="@drawable/button_green"
+  app:sb_icon="@mipmap/ic_button"
+  app:sb_icon_size="36dp"
+  app:sb_icon_tint="@color/white"/>
+  
+<!-- icon and text on the button -->
+<com.mintminter.simplewidget.SimpleButton
+  android:layout_width="0dp"
+  android:layout_weight="2"
+  android:layout_height="50dp"
+  android:layout_marginRight="10dp"
+  android:background="@color/orange600"
+  app:sb_icon="@mipmap/ic_button"
+  app:sb_icon_tint="@color/white"
+  app:sb_text="@string/button"
+  app:sb_icon_size="36dp"
+  app:sb_text_appearance="@style/simplebuttonText1"/>
+
+<!-- only text on the button -->
+<com.mintminter.simplewidget.SimpleButton
+  android:layout_width="0dp"
+  android:layout_weight="3"
+  android:layout_height="50dp"
+  android:background="@drawable/button_green"
+  app:sb_text="Button Without Icon"
+  app:sb_text_appearance="@style/simplebuttonText1"/>
+        
+```
+Set/Change button's text in your Activity
+```
+SimpleButton simpleButton = (SimpleButton) findViewById(R.id.simplebutton);
+simpleButton.setText("Set Text Programmably");
+```
+They will be looked like
+
+<img src="https://github.com/IreneXY/SimpleWidget/raw/master/screenshot/SimpleButton-1.2.1.png">
+
 ## Demo
-https://raw.githubusercontent.com/IreneXY/SimpleWidget/master/apk/demo-1.1.3.apk
+https://raw.githubusercontent.com/IreneXY/SimpleWidget/master/apk/demo-1.2.1.apk
 
 ## Licence
 
