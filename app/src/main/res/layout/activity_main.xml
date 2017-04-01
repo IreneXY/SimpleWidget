@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+ /*******************************************************************************
+ * Copyright (c) 2016-2017 Irene Yu
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *******************************************************************************/
+ -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,54 +21,117 @@
     android:orientation="vertical"
     tools:context="com.mintminter.simplewidgetdemo.MainActivity">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="SimpleProgressBar:" />
-
-    <com.mintminter.simplewidget.SimpleProgressBar
-        android:id="@+id/simpleprogressbar"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="15dp"
-        app:spb_foreground_color="@color/amber500"
-        app:spb_background_color="@color/blue500"
-        app:spb_progress="0.3"
-        app:spb_corner="2dp"/>
+        android:layout_height="match_parent">
 
-    <com.mintminter.simplewidget.SimpleProgressBar
-        android:layout_marginTop="20dp"
-        android:id="@+id/simpleprogressbar1"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        app:spb_foreground_color="@color/purple500"
-        app:spb_background_color="@color/purple100"
-        app:spb_progress="0.3"
-        app:spb_corner="7dp"
-        app:spb_shadow_border_width="8dp"
-        app:spb_shadow_corner="16dp"
-        app:spb_shadow_color="@color/grey300"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <com.mintminter.simplewidget.SimpleProgressBar
-        android:layout_marginTop="20dp"
-        android:id="@+id/simpleprogressbar2"
-        android:layout_width="match_parent"
-        android:layout_height="15dp"
-        app:spb_foreground_color="@color/green500"
-        app:spb_background_color="@color/lightblue100"
-        app:spb_progress="0.5"
-        app:spb_corner="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="SimpleProgressBar:" />
 
-    <com.mintminter.simplewidget.SimpleProgressBar
-        android:layout_marginTop="20dp"
-        android:id="@+id/simpleprogressbar3"
-        android:layout_width="match_parent"
-        android:layout_height="15dp"
-        app:spb_foreground_color="@color/red500"
-        app:spb_background_color="@color/red100"
-        app:spb_progress="0.7"
-        app:spb_corner="0dp"/>
+            <com.mintminter.simplewidget.SimpleProgressBar
+                android:id="@+id/simpleprogressbar"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                app:spb_foreground_color="@color/amber500"
+                app:spb_background_color="@color/blue500"
+                app:spb_progress="0.3"
+                app:spb_corner="2dp"/>
+
+            <com.mintminter.simplewidget.SimpleProgressBar
+                android:layout_marginTop="20dp"
+                android:id="@+id/simpleprogressbar1"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                app:spb_foreground_color="@color/purple500"
+                app:spb_background_color="@color/purple100"
+                app:spb_progress="0.3"
+                app:spb_corner="7dp"
+                app:spb_shadow_border_width="@dimen/shadow_border_width"
+                app:spb_shadow_corner="@dimen/shadow_corner"
+                app:spb_shadow_color="@color/grey300"/>
+
+            <com.mintminter.simplewidget.SimpleProgressBar
+                android:layout_marginTop="20dp"
+                android:id="@+id/simpleprogressbar2"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                app:spb_foreground_color="@color/green500"
+                app:spb_background_color="@color/lightblue100"
+                app:spb_progress="0.5"
+                app:spb_corner="4dp"/>
+
+            <com.mintminter.simplewidget.SimpleProgressBar
+                android:layout_marginTop="20dp"
+                android:id="@+id/simpleprogressbar3"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                app:spb_foreground_color="@color/red500"
+                app:spb_background_color="@color/red100"
+                app:spb_progress="0.7"
+                app:spb_corner="0dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="SimpleButton:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <com.mintminter.simplewidget.SimpleButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_green"
+                    app:sb_icon="@mipmap/ic_button"
+                    app:sb_icon_size="36dp"
+                    app:sb_icon_tint="@color/white"/>
+
+                <com.mintminter.simplewidget.SimpleButton
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/orange600"
+                    app:sb_icon="@mipmap/ic_button"
+                    app:sb_icon_tint="@color/white"
+                    app:sb_text="@string/button"
+                    app:sb_icon_size="36dp"
+                    app:sb_text_appearance="@style/simplebuttonText1"/>
+
+                <com.mintminter.simplewidget.SimpleButton
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button_green"
+                    app:sb_text="Button Without Icon"
+                    app:sb_text_appearance="@style/simplebuttonText1"/>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 
 </LinearLayout>
